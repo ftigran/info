@@ -103,7 +103,9 @@ const CV_DATA = {
       switchTheme: { light: "Light", dark: "Dark" },
       language: "Language",
       darkMode: "Dark mode",
-      languages: "Languages"
+      languages: "Languages",
+      getInTouch: "Get in Touch",
+      contactCTA: "Interested in working together? Feel free to reach out."
     }
   },
 
@@ -211,7 +213,9 @@ const CV_DATA = {
       switchTheme: { light: "Светлая", dark: "Тёмная" },
       language: "Язык",
       darkMode: "Тёмная тема",
-      languages: "Языки"
+      languages: "Языки",
+      getInTouch: "Связаться",
+      contactCTA: "Хотите работать вместе? Буду рад обсудить."
     }
   }
 };
