@@ -842,9 +842,9 @@ body {
 
 /* ─── Scroll Animations ────────────────────────────────────── */
 .section {
-  opacity: 0;
-  transform: translateY(30px);
-  transition: opacity 0.6s ease, transform 0.6s ease;
+  opacity: 0.35;
+  transform: translateY(24px);
+  transition: opacity 0.55s ease, transform 0.55s ease;
 }
 .section.visible {
   opacity: 1;
@@ -978,4 +978,54 @@ body {
   color: var(--text-muted);
   text-transform: uppercase;
   letter-spacing: 0.04em;
+}
+
+/* ─── 1. Tech Marquee ───────────────────────────────────────── */
+.tech-marquee {
+  overflow: hidden;
+  margin: 0 0 28px;
+  mask-image: linear-gradient(to right, transparent, black 12%, black 88%, transparent);
+  -webkit-mask-image: linear-gradient(to right, transparent, black 12%, black 88%, transparent);
+}
+
+.tech-marquee-row {
+  display: flex;
+  margin-bottom: 8px;
+}
+
+.tech-marquee-track {
+  display: flex;
+  gap: 8px;
+  width: max-content;
+  animation: marquee 40s linear infinite;
+  will-change: transform;
+}
+
+.tech-marquee-row--rtl .tech-marquee-track {
+  animation-direction: reverse;
+  animation-duration: 34s;
+}
+
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+.tech-marquee-track span {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 12px;
+  border-radius: 20px;
+  background: var(--pill-bg);
+  color: var(--text-muted);
+  font-size: 0.72rem;
+  font-weight: 500;
+  border: 1px solid var(--border);
+  white-space: nowrap;
+  user-select: none;
+}
+
+/* ─── Reduced motion overrides ──────────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  .tech-marquee-track { animation: none; }
 }
