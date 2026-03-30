@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="{{lang}}">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{{title}}</title>
+  <meta name="description" content="{{description}}" />
+  <meta name="author" content="Tigran Frangyan" />
+  <meta name="keywords" content="{{keywords}}" />
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='8' fill='%236C5CE7'/><text x='32' y='32' font-family='Arial,sans-serif' font-size='38' font-weight='bold' fill='white' text-anchor='middle' dominant-baseline='central' dy='0'>TF</text></svg>" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="{{title}}" />
+  <meta property="og:description" content="{{description}}" />
+  <meta property="og:url" content="{{canonicalUrl}}" />
+  <meta property="og:locale" content="{{ogLocale}}" />
+  <meta property="og:locale:alternate" content="{{ogLocaleAlt}}" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="{{title}}" />
+  <meta name="twitter:description" content="{{description}}" />
+
+  <link rel="canonical" href="{{canonicalUrl}}" />
+  {{{hreflangTags}}}
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" as="style" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+{{{jsonLd}}}
+  </script>
+</head>
+<body data-theme="light">
+
+  <!-- Mobile overlay -->
+  <div class="mobile-overlay" id="mobileOverlay"></div>
+
+  <!-- Mobile top bar -->
+  <div class="mobile-topbar">
+    <span class="mobile-topbar-name" id="mobileBarName">{{name}}</span>
+    <div class="mobile-topbar-actions">
+      <button class="mobile-menu-btn" id="langBtnMobile" title="Toggle language" style="font-family:inherit;font-size:12px;font-weight:600;color:var(--accent);background:var(--accent-light);border-radius:6px;padding:5px 10px;border:none;cursor:pointer;">{{ui.switchLang}}</button>
+      <button class="mobile-menu-btn" id="themeBtnMobile" title="Toggle theme" aria-label="Toggle theme">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+      </button>
+      <button class="mobile-menu-btn" id="menuBtn" aria-label="Open menu">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+    </div>
+  </div>
+
+  <div class="layout">
+
+    <!-- ─── Sidebar ─────────────────────────────────────── -->
+    <aside class="sidebar" id="sidebar">
+
+      <!-- Avatar + Name -->
+      <div class="avatar">
+        <span class="avatar-initials">TF</span>
+        <picture>
+          <source srcset="%BASE_URL%assets/avatar.webp" type="image/webp" />
+          <img src="%BASE_URL%assets/avatar.png" alt="{{name}}" onload="this.classList.add('loaded')" onerror="this.style.display='none'" />
+        </picture>
+      </div>
+      <div class="sidebar-name" id="sidebarName">{{name}}</div>
+      <div class="sidebar-title" id="sidebarTitle">{{role}}</div>
+
+      <div class="sidebar-divider"></div>
+
+      <!-- Contact -->
+      <ul class="contact-list" id="contactList">
+        <li>
+          <a href="{{contacts.telegram.url}}" target="_blank" rel="noopener noreferrer">
+            {{{svgIcon "telegram"}}}<span>{{contacts.telegram.label}}</span>
+          </a>
+        </li>
+        <li>
+          <a href="mailto:{{contacts.email}}" target="_blank" rel="noopener noreferrer">
+            {{{svgIcon "email"}}}<span>{{contacts.email}}</span>
+          </a>
+        </li>
+        <li>
+          <a href="{{contacts.github.url}}" target="_blank" rel="noopener noreferrer">
+            {{{svgIcon "github"}}}<span>{{contacts.github.label}}</span>
+          </a>
+        </li>
+        <li>
+          <a href="{{contacts.linkedin.url}}" target="_blank" rel="noopener noreferrer">
+            {{{svgIcon "linkedin"}}}<span>{{contacts.linkedin.label}}</span>
+          </a>
+        </li>
+      </ul>
+
+      <div class="sidebar-divider"></div>
+
+      <!-- Nav -->
+      <nav>
+        <ul class="sidebar-nav" id="sidebarNav">
+          <li><a href="#section-about"      class="nav-link" data-section="about"><span class="nav-dot"></span>{{nav.about}}</a></li>
+          <li><a href="#section-experience" class="nav-link" data-section="experience"><span class="nav-dot"></span>{{nav.experience}}</a></li>
+          <li><a href="#section-skills"     class="nav-link" data-section="skills"><span class="nav-dot"></span>{{nav.skills}}</a></li>
+          <li><a href="#section-education"  class="nav-link" data-section="education"><span class="nav-dot"></span>{{nav.education}}</a></li>
+          <li><a href="#section-contact"    class="nav-link" data-section="contact"><span class="nav-dot"></span>{{nav.contact}}</a></li>
+        </ul>
+      </nav>
+
+      <div class="sidebar-divider"></div>
+
+      <!-- Toggles -->
+      <div class="toggles">
+        <div class="toggle-row">
+          <span class="toggle-label" id="langLabel">{{ui.language}}</span>
+          <button class="lang-btn" id="langBtn">{{ui.switchLang}}</button>
+        </div>
+        <div class="toggle-row">
+          <span class="toggle-label" id="themeLabel">{{ui.darkMode}}</span>
+          <label class="switch" title="Toggle theme">
+            <input type="checkbox" id="themeToggle" />
+            <span class="switch-track"></span>
+          </label>
+        </div>
+        <div class="toggle-row">
+          <a href="%BASE_URL%assets/Tigran_Frangyan_Senior_Frontend_Developer.pdf" download class="download-cv-btn" id="downloadCvBtn">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            <span id="downloadCvLabel">{{ui.downloadCV}}</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="sidebar-divider"></div>
+
+      <!-- Spoken languages -->
+      <div class="spoken-langs">
+        <div class="spoken-langs-label" id="spokenLabel">{{ui.languages}}</div>
+        <div class="spoken-langs-list" id="spokenList">
+          {{#each languages}}
+          <div class="spoken-lang-item">
+            <span class="spoken-lang-name">{{this.lang}}</span>
+            <span class="spoken-lang-level">{{this.level}}</span>
+          </div>
+          {{/each}}
+        </div>
+      </div>
+
+    </aside>
+
+    <!-- ─── Main ─────────────────────────────────────────── -->
+    <main class="main" id="mainContent">
+
+      <section class="section" id="section-about" style="margin-bottom:56px">
+        <div class="section-header">
+          <h2 class="section-title" id="titleAbout">{{nav.about}}</h2>
+          <div class="section-line"></div>
+        </div>
+        <div class="about-card">
+          <p class="about-subtitle" id="aboutSubtitle">{{subtitle}}</p>
+          <p class="about-tagline" id="aboutTagline">{{tagline}}</p>
+          <p class="about-text" id="aboutText">{{summary}}</p>
+          <div class="about-card-footer">
+            <button class="cta-btn cta-btn--about" id="ctaBtnAbout">{{ui.getInTouch}}</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="section-experience">
+        <div class="section-header">
+          <h2 class="section-title" id="titleExperience">{{nav.experience}}</h2>
+          <div class="section-line"></div>
+        </div>
+        <div class="timeline" id="timelineContainer">
+          {{#each experience}}
+          <div class="timeline-entry">
+            <div class="timeline-dot"></div>
+            <div class="timeline-header">
+              <div class="timeline-company">{{this.company}}</div>
+              <div class="timeline-role">{{this.role}}</div>
+            </div>
+            <div class="timeline-meta">
+              <span class="timeline-period">{{this.period}}</span>
+              {{#if this.location}}<span class="timeline-location">{{this.location}}</span>{{/if}}
+            </div>
+            <ul class="timeline-bullets">
+              {{#each this.highlights}}<li>{{{this}}}</li>{{/each}}
+            </ul>
+          </div>
+          {{/each}}
+        </div>
+      </section>
+
+      <section class="section" id="section-skills">
+        <div class="section-header">
+          <h2 class="section-title" id="titleSkills">{{nav.skills}}</h2>
+          <div class="section-line"></div>
+        </div>
+        <div class="skills-grid" id="skillsGrid">
+          {{#each skills}}
+          <div class="skill-category">
+            <div class="skill-category-name">{{@key}}</div>
+            <div class="skill-pills">
+              {{#each this}}<span class="skill-pill">{{this}}</span>{{/each}}
+            </div>
+          </div>
+          {{/each}}
+        </div>
+      </section>
+
+      <section class="section" id="section-education">
+        <div class="section-header">
+          <h2 class="section-title" id="titleEducation">{{nav.education}}</h2>
+          <div class="section-line"></div>
+        </div>
+        <div class="edu-list" id="eduList">
+          <div class="edu-entry">
+            <div class="edu-institution">{{education.university}}</div>
+            <div class="edu-degree">{{education.degree}}</div>
+            <div class="edu-period">{{education.period}}</div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="section-contact">
+        <div class="section-header">
+          <h2 class="section-title" id="titleContact">{{nav.contact}}</h2>
+          <div class="section-line"></div>
+        </div>
+        <p class="contact-cta-text" id="contactCTAText">{{ui.contactCTA}}</p>
+        <div class="contact-cards" id="contactCards">
+          <a class="contact-card" href="{{contacts.telegram.url}}" target="_blank" rel="noopener noreferrer">
+            <div class="card-icon">{{{cardIcon "telegram"}}}</div>
+            <div class="card-info">
+              <span class="card-type">Telegram</span>
+              <span class="card-label">{{contacts.telegram.label}}</span>
+            </div>
+          </a>
+          <a class="contact-card" href="mailto:{{contacts.email}}" target="_blank" rel="noopener noreferrer">
+            <div class="card-icon">{{{cardIcon "email"}}}</div>
+            <div class="card-info">
+              <span class="card-type">Email</span>
+              <span class="card-label">{{contacts.email}}</span>
+            </div>
+          </a>
+          <a class="contact-card" href="{{contacts.github.url}}" target="_blank" rel="noopener noreferrer">
+            <div class="card-icon">{{{cardIcon "github"}}}</div>
+            <div class="card-info">
+              <span class="card-type">GitHub</span>
+              <span class="card-label">{{contacts.github.label}}</span>
+            </div>
+          </a>
+          <a class="contact-card" href="{{contacts.linkedin.url}}" target="_blank" rel="noopener noreferrer">
+            <div class="card-icon">{{{cardIcon "linkedin"}}}</div>
+            <div class="card-info">
+              <span class="card-type">LinkedIn</span>
+              <span class="card-label">{{contacts.linkedin.label}}</span>
+            </div>
+          </a>
+        </div>
+      </section>
+
+      <footer class="footer" id="footerEl">© {{year}} {{name}}</footer>
+
+    </main>
+  </div>
+
+  <noscript>
+    <div style="max-width:720px;margin:40px auto;padding:0 20px;font-family:sans-serif;line-height:1.7">
+      {{{noscript}}}
+    </div>
+  </noscript>
+
+  <!-- Back to Top -->
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg>
+  </button>
+
+</body>
+</html>

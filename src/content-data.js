@@ -1,4 +1,4 @@
-const CV_DATA = {
+export const CV_DATA = {
   en: {
     name: "Tigran Frangyan",
     title: "Senior Frontend Developer",
@@ -19,7 +19,7 @@ const CV_DATA = {
         description: "A leading digital bank in Eastern Europe with 40M+ customers.",
         highlights: [
           "Slashed CI/CD build times by 80% (hours → minutes), unblocking 3 feature teams.",
-          "Led full Webpack → Vite migration — HMR dropped from ~8s to <1s for a 12-person team.",
+          "Led full Webpack → Vite migration — HMR dropped from ~8s to &lt;1s for a 12-person team.",
           "Shipped Sentry integration + Feature Toggles, enabling zero-downtime rollouts.",
           "Mentored 4 junior/mid engineers, conducted 10+ technical interviews.",
           "Proposed UX changes that reduced support tickets for a key onboarding flow."
@@ -44,7 +44,7 @@ const CV_DATA = {
         period: "Jun 2021 — Dec 2022 · 1 yr 7 mos",
         description: "International SaaS platform for A/B testing and web personalization.",
         highlights: [
-          "Promoted to core R&D team after one year for high code quality and proactive problem-solving.",
+          "Promoted to core R&amp;D team after one year for high code quality and proactive problem-solving.",
           "Built key DevTools components: Monaco Editor-based code editor, visual web builder, Chrome extension.",
           "Implemented custom A/B tests for Toyota, Renault — directly impacting conversion rates.",
           "Independently scoped requirements with a distributed international team."
@@ -129,7 +129,7 @@ const CV_DATA = {
         description: "Ведущий цифровой банк Восточной Европы с 40M+ клиентов.",
         highlights: [
           "Ускорил CI/CD на 80% (часы → минуты), разблокировав 3 продуктовые команды.",
-          "Руководил полной миграцией Webpack → Vite — HMR упал с ~8с до <1с для команды из 12 человек.",
+          "Руководил полной миграцией Webpack → Vite — HMR упал с ~8с до &lt;1с для команды из 12 человек.",
           "Внедрил Sentry + систему Feature Toggles, обеспечив zero-downtime деплои.",
           "Менторил 4 junior/mid инженеров, провёл 10+ технических интервью.",
           "Предложил UX-изменения, снизившие количество тикетов поддержки по ключевому онбордингу."
@@ -154,7 +154,7 @@ const CV_DATA = {
         period: "Июн 2021 — Дек 2022 · 1 год 7 мес",
         description: "Международная SaaS-платформа для A/B-тестирования и персонализации.",
         highlights: [
-          "Переведён в core R&D через год за высокое качество кода и проактивность.",
+          "Переведён в core R&amp;D через год за высокое качество кода и проактивность.",
           "Разработал ключевые компоненты DevTools: редактор на Monaco Editor, визуальный web-builder, Chrome extension.",
           "Реализовал A/B-тесты для Toyota, Renault — прямое влияние на конверсию.",
           "Самостоятельно уточнял требования с распределённой международной командой."

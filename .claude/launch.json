@@ -3,8 +3,8 @@
   "configurations": [
     {
       "name": "cv-preview",
-      "runtimeExecutable": "python3",
-      "runtimeArgs": ["-m", "http.server", "3200"],
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["run", "dev", "--", "--port", "3200"],
       "port": 3200
     }
   ]
