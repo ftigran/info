@@ -6,6 +6,9 @@ This project generates a personal bio web page from Tigran Frangyan's CV PDF.
 
 ```
 cv/
+├── assets/      ← Static files (CV PDF, avatar photo)
+│   ├── Tigran_Frangyan_Senior_Frontend_Developer.pdf
+│   └── avatar.png
 ├── content.js   ← SINGLE SOURCE OF TRUTH for all bio content (bilingual EN/RU)
 ├── index.html   ← Bio page (Fixed Sidebar layout)
 └── CLAUDE.md    ← This file
@@ -19,7 +22,7 @@ cv/
 
 When the user provides an updated CV PDF:
 
-1. **Use the `/pdf` skill** to extract text from the PDF file in this directory.
+1. **Use the `/pdf` skill** to extract text from the PDF file in `assets/`.
 
 2. **Update `content.js`** — edit ONLY the `CV_DATA` object. Keep the exact same structure:
 
