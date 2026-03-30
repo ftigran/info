@@ -8,7 +8,7 @@ export default {
     locale: 'en_US',
     alternateLocale: 'ru_RU',
     title: 'Tigran Frangyan — Senior Frontend Developer',
-    description: 'Senior Frontend Developer specializing in fintech. 7+ years building complex web apps in React & TypeScript. Currently at T-Bank (40M+ users).',
+    description: '7+ years building complex web apps in React & TypeScript. Fintech & SaaS. Currently at T-Bank (40M+ users).',
     keywords: 'frontend developer, React, TypeScript, fintech, senior developer, Tigran Frangyan',
     canonicalPath: '',
     jsonLd: {
@@ -51,7 +51,7 @@ export default {
     locale: 'ru_RU',
     alternateLocale: 'en_US',
     title: 'Тигран Франгян — Senior Frontend Developer',
-    description: 'Senior Frontend Developer, специализация — финтех. 7+ лет опыта разработки на React и TypeScript. Сейчас в Т-Банке (40М+ клиентов).',
+    description: '7+ лет опыта разработки на React и TypeScript. Финтех и SaaS. Сейчас в Т-Банке (40М+ клиентов).',
     keywords: 'frontend разработчик, React, TypeScript, финтех, Тигран Франгян',
     canonicalPath: 'ru/',
     jsonLd: {
