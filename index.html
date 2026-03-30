@@ -4,6 +4,25 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Tigran Frangyan — Senior Frontend Developer</title>
+  <meta name="description" content="Senior Frontend Developer specializing in fintech. 7+ years building complex web apps in React &amp; TypeScript. Currently at T-Bank (40M+ users)." />
+  <meta name="author" content="Tigran Frangyan" />
+  <meta name="keywords" content="frontend developer, React, TypeScript, fintech, senior developer, Tigran Frangyan" />
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='8' fill='%236C5CE7'/><text x='32' y='32' font-family='Arial,sans-serif' font-size='38' font-weight='bold' fill='white' text-anchor='middle' dominant-baseline='central' dy='0'>TF</text></svg>" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Tigran Frangyan — Senior Frontend Developer" />
+  <meta property="og:description" content="Senior Frontend Developer specializing in fintech. 7+ years building complex web apps in React &amp; TypeScript." />
+  <meta property="og:url" content="https://ftigran.github.io/bio/" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:locale:alternate" content="ru_RU" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Tigran Frangyan — Senior Frontend Developer" />
+  <meta name="twitter:description" content="Senior Frontend Developer specializing in fintech. 7+ years building complex web apps in React &amp; TypeScript." />
+
+  <link rel="canonical" href="https://ftigran.github.io/bio/" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
@@ -69,6 +88,7 @@
     .layout {
       display: flex;
       min-height: 100vh;
+      justify-content: center;
     }
 
     /* ─── Sidebar ───────────────────────────────────────────────── */
@@ -270,6 +290,27 @@
       font-weight: 500;
       color: var(--text-muted);
       transition: color var(--transition);
+    }
+
+    .download-cv-btn {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      width: 100%;
+      padding: 8px 12px;
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--accent);
+      background: transparent;
+      border: 1.5px solid var(--accent);
+      border-radius: 8px;
+      cursor: pointer;
+      text-decoration: none;
+      transition: background var(--transition), color var(--transition);
+    }
+    .download-cv-btn:hover {
+      background: var(--accent);
+      color: #fff;
     }
 
     /* Switch toggle */
@@ -869,6 +910,12 @@
             <span class="switch-track"></span>
           </label>
         </div>
+        <div class="toggle-row">
+          <a href="./Tigran_Frangyan_Senior_Frontend_Developer.pdf" download class="download-cv-btn" id="downloadCvBtn">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            <span id="downloadCvLabel">Download CV</span>
+          </a>
+        </div>
       </div>
 
       <div class="sidebar-divider"></div>
@@ -945,6 +992,32 @@
 
     </main>
   </div>
+
+  <noscript>
+    <div style="max-width:720px;margin:40px auto;padding:0 20px;font-family:sans-serif;line-height:1.7">
+      <h1>Tigran Frangyan</h1>
+      <p><strong>Senior Frontend Developer</strong> · Fintech &amp; SaaS · 7+ years · React &amp; TypeScript</p>
+      <p>Senior Frontend Developer specializing in fintech with 7+ years of experience building complex web applications in React and TypeScript. At Rosbank (Société Générale group), architected and shipped a currency control platform from scratch — replacing 3 legacy systems, unifying workflows for 50+ users, and reducing production bugs by 40%. At T-Bank (40M+ customers), cut CI/CD build times by 80% and led the Webpack → Vite migration.</p>
+      <h2>Experience</h2>
+      <ul>
+        <li><strong>T-Bank</strong> — Senior Frontend Developer (Jan 2025 – Present)</li>
+        <li><strong>Rosbank (Société Générale)</strong> — Senior Frontend Developer (Dec 2022 – Jan 2025)</li>
+        <li><strong>Kameleoon</strong> — React Developer → Core R&amp;D (Jun 2021 – Dec 2022)</li>
+        <li><strong>Atoms Digital Agency</strong> — Junior → Mid Frontend Developer (Feb 2019 – Jun 2021)</li>
+      </ul>
+      <h2>Skills</h2>
+      <p>React, TypeScript, JavaScript (ES6+), Next.js, Redux Toolkit, RTK Query, Effector, MobX, Jest, Vitest, Playwright, Feature-Sliced Design, Vite, Webpack, Docker, CI/CD, REST API, GraphQL, WebSockets, CSS3, Tailwind CSS</p>
+      <h2>Education</h2>
+      <p>Don State Technical University — Bachelor of Science in Computer Science (2016–2020)</p>
+      <h2>Contact</h2>
+      <ul>
+        <li>Telegram: <a href="https://t.me/ftigran">t.me/ftigran</a></li>
+        <li>Email: <a href="mailto:ftigran1@gmail.com">ftigran1@gmail.com</a></li>
+        <li>GitHub: <a href="https://github.com/ftigran">github.com/ftigran</a></li>
+        <li>LinkedIn: <a href="https://linkedin.com/in/ftigran">linkedin.com/in/ftigran</a></li>
+      </ul>
+    </div>
+  </noscript>
 
   <script src="./content.js"></script>
   <script>
@@ -1023,6 +1096,7 @@
       $('spokenLabel').textContent = ui.languages || 'Languages';
       $('langBtn').textContent     = currentLang === 'en' ? 'RU' : 'EN';
       $('langBtnMobile').textContent = currentLang === 'en' ? 'RU' : 'EN';
+      $('downloadCvLabel').textContent = ui.downloadCV || 'Download CV';
 
       /* ── Spoken languages ── */
       const langs = data.languages || [];
