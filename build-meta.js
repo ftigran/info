@@ -1,4 +1,4 @@
-const baseUrl = 'https://ftigran.github.io/bio/';
+const baseUrl = 'https://ftigran.github.io/info/';
 
 export default {
   baseUrl,

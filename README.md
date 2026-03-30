@@ -1,8 +1,8 @@
-# Personal CV — ftigran.github.io/bio
+# Personal CV
 
 Bilingual (EN/RU) personal CV page. All content is pre-rendered at build time (SSG) via Vite + Handlebars. Client-side JS handles only interactivity.
 
-**Live:** https://ftigran.github.io/bio/
+**Live:** https://ftigran.github.io/info/
 
 ## Stack
 

@@ -1,6 +1,6 @@
-# CV Bio Web Page — Agent Instructions
+# CV Info Web Page — Agent Instructions
 
-This project generates a bilingual (EN/RU) personal bio web page (SSG via Vite + Handlebars).
+This project generates a bilingual (EN/RU) personal info web page (SSG via Vite + Handlebars).
 
 ## File Structure
 
@@ -18,7 +18,7 @@ cv/
 │   │   └── index.html         ← Vite entry point (RU)
 │   ├── partials/
 │   │   └── page.html          ← Handlebars template (full HTML with all content)
-│   ├── content-data.js        ← SINGLE SOURCE OF TRUTH for all bio content (ES module)
+│   ├── content-data.js        ← SINGLE SOURCE OF TRUTH for all info content (ES module)
 │   ├── icons.js               ← SVG icon strings for Handlebars helpers
 │   ├── app.js                 ← Client JS: theme, language, scroll, sidebar (NO rendering)
 │   └── styles.css             ← All styles (themes, layout, animations, print)
@@ -95,7 +95,7 @@ export const CV_DATA = {
 
 | Change needed | Edit file |
 |---|---|
-| Bio content (text, experience, skills) | `src/content-data.js` |
+| Info content (text, experience, skills) | `src/content-data.js` |
 | SEO meta tags, OG descriptions | `build-meta.js` |
 | HTML layout/structure | `src/partials/page.html` |
 | Styles, animations, responsive | `src/styles.css` |

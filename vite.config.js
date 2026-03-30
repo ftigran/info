@@ -13,7 +13,7 @@ const hreflangTags = meta.languages
 const isProd = process.env.NODE_ENV === 'production';
 
 export default defineConfig({
-  base: isProd ? '/bio/' : '/',
+  base: isProd ? '/info/' : '/',
   root: 'src',
   publicDir: path.resolve(process.cwd(), 'public'),
   build: {
