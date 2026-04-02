@@ -33,6 +33,7 @@
   <script type="application/ld+json">
 {{{jsonLd}}}
   </script>
+  <script defer src="https://cloud.umami.is/script.js" data-website-id="97b2f954-df58-4b16-8acd-2dca052409ca"></script>
 </head>
 <body data-theme="light">
 
@@ -74,22 +75,22 @@
       <!-- Contact -->
       <ul class="contact-list" id="contactList">
         <li>
-          <a href="{{contacts.telegram.url}}" target="_blank" rel="noopener noreferrer">
+          <a href="{{contacts.telegram.url}}" target="_blank" rel="noopener noreferrer" data-umami-event="sidebar-telegram">
             {{{svgIcon "telegram"}}}<span>{{contacts.telegram.label}}</span>
           </a>
         </li>
         <li>
-          <a href="mailto:{{contacts.email}}" target="_blank" rel="noopener noreferrer">
+          <a href="mailto:{{contacts.email}}" target="_blank" rel="noopener noreferrer" data-umami-event="sidebar-email">
             {{{svgIcon "email"}}}<span>{{contacts.email}}</span>
           </a>
         </li>
         <li>
-          <a href="{{contacts.github.url}}" target="_blank" rel="noopener noreferrer">
+          <a href="{{contacts.github.url}}" target="_blank" rel="noopener noreferrer" data-umami-event="sidebar-github">
             {{{svgIcon "github"}}}<span>{{contacts.github.label}}</span>
           </a>
         </li>
         <li>
-          <a href="{{contacts.linkedin.url}}" target="_blank" rel="noopener noreferrer">
+          <a href="{{contacts.linkedin.url}}" target="_blank" rel="noopener noreferrer" data-umami-event="sidebar-linkedin">
             {{{svgIcon "linkedin"}}}<span>{{contacts.linkedin.label}}</span>
           </a>
         </li>
@@ -114,7 +115,7 @@
       <div class="toggles">
         <div class="toggle-row">
           <span class="toggle-label" id="langLabel">{{ui.language}}</span>
-          <button class="lang-btn" id="langBtn">{{ui.switchLang}}</button>
+          <button class="lang-btn" id="langBtn" data-umami-event="switch-language">{{ui.switchLang}}</button>
         </div>
         <div class="toggle-row">
           <span class="toggle-label" id="themeLabel">{{ui.darkMode}}</span>
@@ -124,7 +125,7 @@
           </label>
         </div>
         <div class="toggle-row">
-          <a href="%BASE_URL%assets/Tigran_Frangyan_Senior_Frontend_Developer.pdf" download class="download-cv-btn" id="downloadCvBtn">
+          <a href="%BASE_URL%assets/Tigran_Frangyan_Senior_Frontend_Developer.pdf" download class="download-cv-btn" id="downloadCvBtn" data-umami-event="download-cv">
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
             <span id="downloadCvLabel">{{ui.downloadCV}}</span>
           </a>
@@ -176,7 +177,7 @@
           <p class="about-tagline" id="aboutTagline">{{tagline}}</p>
           <p class="about-text" id="aboutText">{{summary}}</p>
           <div class="about-card-footer">
-            <button class="cta-btn cta-btn--about" id="ctaBtnAbout">{{ui.getInTouch}}</button>
+            <button class="cta-btn cta-btn--about" id="ctaBtnAbout" data-umami-event="cta-get-in-touch">{{ui.getInTouch}}</button>
           </div>
         </div>
       </section>
@@ -244,28 +245,28 @@
         </div>
         <p class="contact-cta-text" id="contactCTAText">{{ui.contactCTA}}</p>
         <div class="contact-cards" id="contactCards">
-          <a class="contact-card" href="{{contacts.telegram.url}}" target="_blank" rel="noopener noreferrer">
+          <a class="contact-card" href="{{contacts.telegram.url}}" target="_blank" rel="noopener noreferrer" data-umami-event="contact-telegram">
             <div class="card-icon">{{{cardIcon "telegram"}}}</div>
             <div class="card-info">
               <span class="card-type">Telegram</span>
               <span class="card-label">{{contacts.telegram.label}}</span>
             </div>
           </a>
-          <a class="contact-card" href="mailto:{{contacts.email}}" target="_blank" rel="noopener noreferrer">
+          <a class="contact-card" href="mailto:{{contacts.email}}" target="_blank" rel="noopener noreferrer" data-umami-event="contact-email">
             <div class="card-icon">{{{cardIcon "email"}}}</div>
             <div class="card-info">
               <span class="card-type">Email</span>
               <span class="card-label">{{contacts.email}}</span>
             </div>
           </a>
-          <a class="contact-card" href="{{contacts.github.url}}" target="_blank" rel="noopener noreferrer">
+          <a class="contact-card" href="{{contacts.github.url}}" target="_blank" rel="noopener noreferrer" data-umami-event="contact-github">
             <div class="card-icon">{{{cardIcon "github"}}}</div>
             <div class="card-info">
               <span class="card-type">GitHub</span>
               <span class="card-label">{{contacts.github.label}}</span>
             </div>
           </a>
-          <a class="contact-card" href="{{contacts.linkedin.url}}" target="_blank" rel="noopener noreferrer">
+          <a class="contact-card" href="{{contacts.linkedin.url}}" target="_blank" rel="noopener noreferrer" data-umami-event="contact-linkedin">
             <div class="card-icon">{{{cardIcon "linkedin"}}}</div>
             <div class="card-info">
               <span class="card-type">LinkedIn</span>
